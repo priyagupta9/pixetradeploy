@@ -1,0 +1,37 @@
+.blue-box{
+    cursor: pointer;
+    display: flex;
+    background-color:rgb(30, 122, 242);
+    border: 2px solid rgb(38, 153, 251);
+    height: 5rem;
+    width: 85%;
+    padding: 1rem 1.3rem;
+    border-radius: 4rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.sub{
+    padding: 3.8rem;
+    width: 88%;
+}
+
+.blue-text{ 
+    color: white;;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background-color: none;
+}
+
+.blue-box img{
+    position: absolute;
+    left: 2.7rem;
+    padding: 4px;
+    height: 50px;
+    width: 50px;
+    fill: rgb(255 ,255 ,255);
+}

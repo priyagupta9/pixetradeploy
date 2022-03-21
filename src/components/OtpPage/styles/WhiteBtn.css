@@ -1,0 +1,45 @@
+.white-box{
+    display: flex;
+    background-color: rgb(255 ,255 ,255);
+    border: 2px solid rgb(38, 153, 251);
+    height: 5rem;
+    width: 85%;
+    padding: 1rem 1.3rem;
+    border-radius: 4rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.white-box img{
+    position: absolute;
+    left: 2.7rem;
+    padding: 4px;
+    height: 50px;
+    width: 50px;
+    fill: rgb(255 ,255 ,255);
+}
+.inp-img{
+    fill: rgb(38, 153, 251);
+}
+.circle{
+    background-color: rgb(38, 153, 251);
+    border-radius: 50%;
+}
+.white-text{
+    color: rgb(38, 153, 251);
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+.white-box input{
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 2.7rem;
+    width: 100%;
+    color: rgb(38, 153, 251);
+}
+::placeholder{
+    color: rgb(38, 153, 251);
+}

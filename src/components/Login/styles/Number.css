@@ -1,0 +1,77 @@
+.phone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+.number-box{
+    display: flex;
+    background-color: rgb(255 ,255 ,255);
+    border: 2px solid rgb(38, 153, 251);
+    height: 5rem;
+    width: 100%;
+    padding: 1rem 1.3rem;
+    border-radius: 4rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.number-box img{
+    position: absolute;
+    left: 2.7rem;
+    background-color: rgb(38, 153, 251);
+    border-radius: 50%;
+    padding: 4px;
+    height: 50px;
+    width: 50px;
+    fill: rgb(255 ,255 ,255);
+}
+.number-box span{
+    font-size: 3rem;
+    color: rgb(38, 153, 251);
+    font-weight: bold;
+    display: flex;
+}
+.number-box span::after{
+    content: "_ _ _ _ _ _ _ _ _ _";
+    margin-left: 3rem;
+}
+.nr-input{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.number-box input{
+    position: absolute;
+    outline: none;
+    border: none;
+    /* border-bottom: 5px dashed rgb(38, 153, 251); */
+    font-weight: lighter;
+    transition: all 0.2s linear;
+    left: 7.8rem;
+    width: 21rem;
+    font-size: 2.6rem;
+    letter-spacing: 12px;
+    color: rgb(38, 153, 251);
+}
+
+.otp-box {
+    display: flex;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+.otp-box input{
+    border-radius: 50%;
+    background-color: rgb(255 ,255 ,255);
+    border: 1px solid rgb(38, 153, 251);
+    height: 5.5rem;
+    width: 5.5rem;
+    padding: 1rem;
+    outline: none;
+}
+.FAQ{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: regular;
+  margin-top: -140px;
+}

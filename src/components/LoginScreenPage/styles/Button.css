@@ -1,0 +1,30 @@
+.circle-btns-wrapper{
+    margin-top: 3rem;
+    display: flex;
+}
+.circlebtn{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding-top: 35px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.circlebtn img{
+    width: 150px;
+    height: 150px;
+}
+.btnskip{
+    width: 100%;
+    position: absolute;
+    bottom : 0;
+    left: 0;
+}
+.btnskip img{
+    width: 100%;
+}
+a{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
