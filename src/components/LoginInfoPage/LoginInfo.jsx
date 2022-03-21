@@ -3,11 +3,12 @@ import logo from "../images/512.png"
 import '../allLogin.css';
 import email from "./img/email.png";
 import person from "./img/person.png"
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import { BrowserRouter as Redirect} from "react-router-dom";
 import "../OtpPage/styles/WhiteBtn.css"
 import "../OtpPage/styles/BlueBtn.css"
 import  mobile from "../images/mobile.png"
+import "./styles/Login.css";
 
 
 import validator from 'validator'
@@ -26,8 +27,22 @@ function LoginInfo() {
   
   const inputEvent = (e) => {
   inp(e);
+  validateName(e);
   validateEmail(e);
+  validatePhone(e);
   }
+
+  function validateName(e){
+    let {name,value} = e.target;
+    if(name==="username"){
+      if(validator.isAlpha(value)){
+        setusernameError("")
+      }else{
+        setusernameError("Usename can only contain chracters!")
+        document.getElementsByClassName("white-box").classList.add(".red")
+      }
+  }
+}
 
   function validateEmail(e){
     let {name,value} = e.target;
@@ -37,8 +52,20 @@ function LoginInfo() {
       }else{
         setEmailError("Enter Valid Email!")
       }
+  }}
+
+  function validatePhone(e){
+    let {name,value} = e.target;
+    if(name === "phone"){
+      if(value.length < 10){
+        setphoneError("Enter Valid Phone Number")
+      }
+      else{
+        setphoneError("")
+      }
+    }
   }
-  }
+
   function inp(e){
     console.log(inputValues);
     let {name,value} = e.target;
@@ -83,7 +110,7 @@ function LoginInfo() {
             <input type="text" id="userName" placeholder='Enter Your Name' name='username' value={inputValues.username}
               onChange={(e) => inputEvent(e)}></input>
           </div>
-          <small style={{ fontWeight: 'bold',color: 'red',}}>{usernameerror}</small>
+          <small>{usernameerror}</small>
         </div>
 
         <div className='input_box'>
@@ -92,7 +119,7 @@ function LoginInfo() {
             <input type="text" id="userEmail" placeholder='Enter Email ID' name='email' value={inputValues.email}
               onChange={(e) => inputEvent(e)}></input>
           </div>
-          <small style={{ fontWeight: 'bold',color: 'red',}}>{emailerror}</small>
+          <small>{emailerror}</small>
         </div>
 
         <div className='input_box'>
@@ -101,8 +128,8 @@ function LoginInfo() {
             <div className='nr-input'>
               <span>+91</span>
                 <input
-                    type="text"
-                    pattern='[0-9*'
+                    type="tel"
+                    pattern='[0-9]*'
                     label="Enter Phone Number"
                     title='Number'
                     required
@@ -112,8 +139,8 @@ function LoginInfo() {
                     onChange={(e) => inputEvent(e)}
                 />
             </div>
-            <small style={{ fontWeight: 'bold',color: 'red',}}>{phoneerror}</small>
           </div>
+            <small>{phoneerror}</small>
           </div>
           <button className='blue-box sub' type='submit' onClick={handleSubmit}>
           <p className='blue-text'>CONTINUE</p></button>
