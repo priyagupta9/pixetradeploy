@@ -7,10 +7,14 @@ import ProductFlow from './ProductFlowP1Page/ProductFlow';
 import LoginInfo from "./LoginInfoPage/LoginInfo"
 import LoginScreen from "./LoginScreenPage/LoginScreen"
 import Error from './Error';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import SwipeToSlide from "./SwipeToSlide.js";
+import Home from "./HomePage/Home.jsx";
 function App() {
   return (
     <div>
+      
     <Router>
       <Routes>
         <Route path='/' element={<LoginScreen />} />
@@ -19,7 +23,7 @@ function App() {
         <Route path='/pixetra' />
         <Route path='/products' element={<Product />} />
         <Route path='/product-name' element={<ProductFlow />} />
-
+        <Route path='/home' element={<Home />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>
@@ -28,6 +32,8 @@ function App() {
     <Otp />
     <Product />
     <ProductFlow /> */}
+    {/* <SwipeToSlide/> */}
+   
     </div>
   );
 }
