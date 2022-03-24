@@ -9,7 +9,7 @@ import home from "./img/home.png"
 function BottomNavbar() {
   return (
     <div className='nav-icons'>
-      <a href='/Home'><img src={home} alt="home-icon" />Home</a>
+      <a href='/home'><img src={home} alt="home-icon" />Home</a>
       <a href='/Products'><img src={gift} alt="gift-icon" />Products</a>
       <a href='/My-Drafts'><img src={heart} alt="heart-icon" />My Drafts</a>
       <a href='/Account'><img src={account} alt="account-icon" />Accounts</a>
