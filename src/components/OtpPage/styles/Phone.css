@@ -15,15 +15,18 @@
     content: "_ _ _ _ _ _ _ _ _ _";
     margin-left: 3rem;
 }
-
+.white-box input{
+    text-align: none;
+}
 .nr-input input{
     position: absolute;
     outline: none;
     border: none;
+    text-align: left !important;
     /* border-bottom: 5px dashed rgb(38, 153, 251); */
     font-weight: lighter;
     transition: all 0.2s linear;
-    left: 7.8rem;
+    left: 7.7rem;
     bottom: 0.4rem;
     width: 100%;
     font-size: 2.6rem;
