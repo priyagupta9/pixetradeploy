@@ -10,7 +10,6 @@ import "../OtpPage/styles/BlueBtn.css"
 import  mobile from "../images/mobile.png"
 import "./styles/Login.css";
 
-
 import validator from 'validator'
 
 function LoginInfo() {
@@ -34,30 +33,29 @@ function LoginInfo() {
 
   function validateName(e){
     let {name,value} = e.target;
-    if(name==="username"){
-      if(validator.isAlpha(value)){
-        setusernameError("")
-      }else{
+    if(name === "username"){
+      if(!validator.isAlpha(value) && (value !== "")){
         setusernameError("Usename can only contain chracters!")
-        document.getElementsByClassName("white-box").classList.add(".red")
+      }else{
+        setusernameError("")
       }
   }
 }
 
   function validateEmail(e){
     let {name,value} = e.target;
-    if(name==="email"){
-      if(validator.isEmail(value)){
-        setEmailError("")
-      }else{
+    if(name === "email"){
+      if(!validator.isEmail(value) && (value !== "")){
         setEmailError("Enter Valid Email!")
+      }else{
+        setEmailError("")
       }
   }}
 
   function validatePhone(e){
     let {name,value} = e.target;
     if(name === "phone"){
-      if(value.length < 10){
+      if(value.length < 10 && (value !== "")){
         setphoneError("Enter Valid Phone Number")
       }
       else{
@@ -80,9 +78,7 @@ function LoginInfo() {
 
   function handleSubmit(e){
       e.preventDefault();
-      setusernameError("");
-      setEmailError("");
-      setphoneError("");
+      inputEvent(e);
 
       if(inputValues.username ===""){
         setusernameError("Please enter your username");
@@ -126,7 +122,7 @@ function LoginInfo() {
          <div className='white-box'>
             <img src={mobile} alt="phone" className='circle' />
             <div className='nr-input'>
-              <span>+91</span>
+            <span>+91</span>
                 <input
                     type="tel"
                     pattern='[0-9]*'
@@ -152,8 +148,11 @@ function LoginInfo() {
 
 
            </form>
+
+           
       <a href="/">Need help?</a>
     </div>
   );
   }
 export default LoginInfo;
+
