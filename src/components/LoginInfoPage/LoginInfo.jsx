@@ -4,11 +4,11 @@ import '../allLogin.css';
 import email from "./img/email.png";
 import person from "./img/person.png"
 // import {Link} from 'react-router-dom';
-import { BrowserRouter as Redirect} from "react-router-dom";
 import "../OtpPage/styles/WhiteBtn.css"
 import "../OtpPage/styles/BlueBtn.css"
 import  mobile from "../images/mobile.png"
 import "./styles/Login.css";
+import { useNavigate } from 'react-router-dom';
 
 import validator from 'validator'
 
@@ -55,7 +55,7 @@ function LoginInfo() {
   function validatePhone(e){
     let {name,value} = e.target;
     if(name === "phone"){
-      if(value.length < 10 && (value !== "")){
+      if(!validator.isNumeric(value) && (value.length < 10) && (value !== "")){
         setphoneError("Enter Valid Phone Number")
       }
       else{
@@ -76,9 +76,10 @@ function LoginInfo() {
     });
   }
 
+  const Navigate=useNavigate();
+
   function handleSubmit(e){
       e.preventDefault();
-      inputEvent(e);
 
       if(inputValues.username ===""){
         setusernameError("Please enter your username");
@@ -90,7 +91,8 @@ function LoginInfo() {
         setphoneError("Please enter your Phone Number");
         return false;
       }else{
-        return <Redirect to="/otplogin/" />
+        console.log(inputValues.phone);
+        Navigate("/otplogin", { state: { phoneNumber: inputValues.phone } });
       }
   }
 
@@ -112,7 +114,7 @@ function LoginInfo() {
         <div className='input_box'>
           <div className='white-box'>
           <img src={email} alt="phone" />
-            <input type="text" id="userEmail" placeholder='Enter Email ID' name='email' value={inputValues.email}
+            <input type="text" id="userEmail" placeholder='Enter Email ID' name='email' value={inputValues.email} autoComplete
               onChange={(e) => inputEvent(e)}></input>
           </div>
           <small>{emailerror}</small>
@@ -140,13 +142,6 @@ function LoginInfo() {
           </div>
           <button className='blue-box sub' type='submit' onClick={handleSubmit}>
           <p className='blue-text'>CONTINUE</p></button>
-
-          {/* <Link to="/otplogin" >
-          <button className='blue-box sub' type='submit' onClick={handleSubmit}>
-          <p className='blue-text'>CONTINUE</p></button>
-          </Link> */}
-
-
            </form>
 
            

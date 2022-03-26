@@ -3,7 +3,7 @@ import "./styles/Phone.css"
 import "./styles/WhiteBtn.css"
 import  mobile from "../images/mobile.png"
 
-function Phone(){
+function Phone({phonenumber}){
     return(
       <div className='white-box'>
       <img src={mobile} alt="phone" className='circle' />
@@ -17,6 +17,7 @@ function Phone(){
                     required
                     name="phone"
                     maxLength="10"
+                    value={phonenumber}
                 />
             </div>
             </div>

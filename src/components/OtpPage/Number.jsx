@@ -3,8 +3,11 @@ import "./styles/Number.css";
 import Bluebtn from "./BlueBtn"
 import Phone from "./Phone";
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Number() {
+  const { state } = useLocation();
+  console.log(state.phoneNumber);
   const [otp, setOtp] = useState(new Array(6).fill(""));
 
 
@@ -23,7 +26,7 @@ function Number() {
     <div>
       <form action="/" method="post" name="validtelephone">
         <div className="phone">
-        <Phone />
+        <Phone phonenumber={state.phoneNumber} />
           <div className="otp-box"> 
             {
               otp.map((data,index) => {

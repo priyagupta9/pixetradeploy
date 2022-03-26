@@ -38,8 +38,8 @@
     outline: none;
     border: none;
     font-size: 2.7rem;
-    width: 100%;
     color: rgb(38, 153, 251);
+    width: 75%;
 }
 ::placeholder{
     color: rgb(38, 153, 251);

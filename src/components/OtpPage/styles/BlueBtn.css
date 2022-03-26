@@ -36,3 +36,21 @@
     width: 50px;
     fill: rgb(255 ,255 ,255);
 }
+
+/* Change bg color in autofill textbox */
+input{
+    display: flex;
+    font-size: 2.7rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: rgb(38, 153, 251) !important;
+}
+
+
+input:-webkit-autofill::first-line {
+    font-size: 2.7rem !important;
+}
