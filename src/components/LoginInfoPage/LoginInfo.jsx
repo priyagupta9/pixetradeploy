@@ -3,13 +3,11 @@ import logo from "../images/512.png"
 import '../allLogin.css';
 import email from "./img/email.png";
 import person from "./img/person.png"
-// import {Link} from 'react-router-dom';
-import { BrowserRouter as Redirect} from "react-router-dom";
 import "../OtpPage/styles/WhiteBtn.css"
 import "../OtpPage/styles/BlueBtn.css"
 import  mobile from "../images/mobile.png"
 import "./styles/Login.css";
-
+import { useNavigate } from 'react-router-dom';
 
 import validator from 'validator'
 
@@ -34,30 +32,35 @@ function LoginInfo() {
 
   function validateName(e){
     let {name,value} = e.target;
-    if(name==="username"){
-      if(validator.isAlpha(value)){
-        setusernameError("")
-      }else{
+    if(name === "username"){
+      if(value.length < 3 && (value !== "")){
+        setusernameError("Username must be of minimun 3 chracters")
+      }
+      if(!validator.isAlpha(value) && (value !== "")){
         setusernameError("Usename can only contain chracters!")
-        document.getElementsByClassName("white-box").classList.add(".red")
+      }else{
+        setusernameError("")
       }
   }
 }
 
   function validateEmail(e){
     let {name,value} = e.target;
-    if(name==="email"){
-      if(validator.isEmail(value)){
-        setEmailError("")
-      }else{
+    if(name === "email"){
+      if(!validator.isEmail(value) && (value !== "")){
         setEmailError("Enter Valid Email!")
+      }else{
+        setEmailError("")
       }
   }}
 
   function validatePhone(e){
     let {name,value} = e.target;
     if(name === "phone"){
-      if(value.length < 10){
+      if(!validator.isNumeric(value) && (value !== "")){
+        setphoneError("Enter Valid Phone Number")
+      }
+      else if(value.length !== 10 && (value !== "")){
         setphoneError("Enter Valid Phone Number")
       }
       else{
@@ -78,11 +81,10 @@ function LoginInfo() {
     });
   }
 
+  const Navigate=useNavigate();
+
   function handleSubmit(e){
       e.preventDefault();
-      setusernameError("");
-      setEmailError("");
-      setphoneError("");
 
       if(inputValues.username ===""){
         setusernameError("Please enter your username");
@@ -93,8 +95,11 @@ function LoginInfo() {
       }else if(inputValues.phone ===""){
         setphoneError("Please enter your Phone Number");
         return false;
-      }else{
-        return <Redirect to="/otplogin/" />
+      }else if(usernameerror !=="" || emailerror !=="" || phoneerror !==""){
+        return false;
+      }
+      else{
+        Navigate("/otplogin", { state: { phoneNumber: inputValues.phone , name: inputValues.username} });
       }
   }
 
@@ -116,7 +121,7 @@ function LoginInfo() {
         <div className='input_box'>
           <div className='white-box'>
           <img src={email} alt="phone" />
-            <input type="text" id="userEmail" placeholder='Enter Email ID' name='email' value={inputValues.email}
+            <input type="text" id="userEmail" placeholder='Enter Email ID' name='email' value={inputValues.email} autoComplete
               onChange={(e) => inputEvent(e)}></input>
           </div>
           <small>{emailerror}</small>
@@ -126,7 +131,7 @@ function LoginInfo() {
          <div className='white-box'>
             <img src={mobile} alt="phone" className='circle' />
             <div className='nr-input'>
-              <span>+91</span>
+            <span>+91</span>
                 <input
                     type="tel"
                     pattern='[0-9]*'
@@ -144,16 +149,12 @@ function LoginInfo() {
           </div>
           <button className='blue-box sub' type='submit' onClick={handleSubmit}>
           <p className='blue-text'>CONTINUE</p></button>
-
-          {/* <Link to="/otplogin" >
-          <button className='blue-box sub' type='submit' onClick={handleSubmit}>
-          <p className='blue-text'>CONTINUE</p></button>
-          </Link> */}
-
-
            </form>
+
+           
       <a href="/">Need help?</a>
     </div>
   );
   }
 export default LoginInfo;
+

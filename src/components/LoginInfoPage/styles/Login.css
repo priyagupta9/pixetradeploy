@@ -7,3 +7,6 @@ small{
     margin-bottom: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+::placeholder{
+    opacity: 0.7;
+}
