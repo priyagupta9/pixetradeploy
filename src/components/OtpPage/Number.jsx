@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import "./styles/Number.css";
 import Bluebtn from "./BlueBtn"
+import "../OtpPage/styles/BlueBtn.css"
 import Phone from "./Phone";
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import {useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Number() {
   const { state } = useLocation();
-  console.log(state.phoneNumber);
+
   const [otp, setOtp] = useState(new Array(6).fill(""));
+  const [OtpError,setOtpError] = useState("");
 
 
   function handleChange(element, index){
     let value=element.value;
     if(isNaN(value)) return false;
+    else if(value === ""){
+      setOtpError("OTP is required")
+      return false
+    }
 
     setOtp([...otp.map((d,idx)=>(idx === index) ? value : d)]);
 
@@ -22,6 +28,11 @@ function Number() {
     }
   }
 
+  const navigate = useNavigate();
+  function handleSubmit(e){
+    e.preventDefault();
+      navigate("/products", { state: { name: state.name} });
+  }
   return (
     <div>
       <form action="/" method="post" name="validtelephone">
@@ -40,10 +51,12 @@ function Number() {
                 />
               })
             }
+            <small>{OtpError}</small>
           </div>
         </div>
         <Bluebtn text="RESEND OTP" img="" />
-        <Link to="/products"><Bluebtn text="CONTINUE" img="" /></Link>
+        <button className='blue-box sub' type='submit' onClick={handleSubmit}>
+          <p className='blue-text'>CONTINUE</p></button>
       </form>
     </div>
   );

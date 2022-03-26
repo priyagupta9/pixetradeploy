@@ -3,7 +3,6 @@ import logo from "../images/512.png"
 import '../allLogin.css';
 import email from "./img/email.png";
 import person from "./img/person.png"
-// import {Link} from 'react-router-dom';
 import "../OtpPage/styles/WhiteBtn.css"
 import "../OtpPage/styles/BlueBtn.css"
 import  mobile from "../images/mobile.png"
@@ -34,6 +33,9 @@ function LoginInfo() {
   function validateName(e){
     let {name,value} = e.target;
     if(name === "username"){
+      if(value.length < 3 && (value !== "")){
+        setusernameError("Username must be of minimun 3 chracters")
+      }
       if(!validator.isAlpha(value) && (value !== "")){
         setusernameError("Usename can only contain chracters!")
       }else{
@@ -55,7 +57,10 @@ function LoginInfo() {
   function validatePhone(e){
     let {name,value} = e.target;
     if(name === "phone"){
-      if(!validator.isNumeric(value) && (value.length < 10) && (value !== "")){
+      if(!validator.isNumeric(value) && (value !== "")){
+        setphoneError("Enter Valid Phone Number")
+      }
+      else if(value.length !== 10 && (value !== "")){
         setphoneError("Enter Valid Phone Number")
       }
       else{
@@ -90,9 +95,11 @@ function LoginInfo() {
       }else if(inputValues.phone ===""){
         setphoneError("Please enter your Phone Number");
         return false;
-      }else{
-        console.log(inputValues.phone);
-        Navigate("/otplogin", { state: { phoneNumber: inputValues.phone } });
+      }else if(usernameerror !=="" || emailerror !=="" || phoneerror !==""){
+        return false;
+      }
+      else{
+        Navigate("/otplogin", { state: { phoneNumber: inputValues.phone , name: inputValues.username} });
       }
   }
 
