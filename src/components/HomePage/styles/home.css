@@ -1,4 +1,20 @@
-.heroimg{
+/* *{
+    background-color: white;
+} */
+.herodiv{
+    background-color: white;
     width: 100%;
-    padding-top: 10px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.heroimg{
+    width: 97%;
+    border-radius: 2.5rem;
+   margin-top: 25px;
+   
+}
+.homeimg{
+    width: 100%;
+    height : auto;
 }

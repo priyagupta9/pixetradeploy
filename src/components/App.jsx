@@ -9,7 +9,7 @@ import LoginScreen from "./LoginScreenPage/LoginScreen"
 import Error from './Error';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import SwipeToSlide from "./SwipeToSlide.js";
+
 import Home from "./HomePage/Home.jsx";
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
     <Otp />
     <Product />
     <ProductFlow /> */}
-    {/* <SwipeToSlide/> */}
+ 
    
     </div>
   );
