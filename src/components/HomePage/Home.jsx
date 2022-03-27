@@ -9,16 +9,16 @@ import BottomNavbar from "../ProductsPage/BottomNavbar"
 import Heroimg from "./img/heroimg.png";
 import Homeimg from "./img/homeing2.jpg";
 import { Link } from 'react-router-dom';
-import Product1 from "./sliderProduct";
+import FrequentProduct from '../Sliders/FrequentProducts'
 import Collection from "./CollectionComp"
 import FeaturedProducts from './FeaturedProducts';
 import SwipeToSlide from '../SwipeToSlide';
-import ProductSlider from '../Sliders/ProductSlider';
+import ProductSlider from '../Sliders/FeaturedProductSlider';
 import CollectionSlider from '../Sliders/CollectionSlider';
 import BlogCard from './BlogCard';
 import img6 from "./img/image6.jpg";
 import Btn from '../ProductFlowP1Page/Btn';
-const data=[1,2,3,4]
+
 function Home() {
   return (
     <div className='product-page'>
@@ -26,6 +26,7 @@ function Home() {
       <div className='herodiv'>
       <img className='heroimg' src={Heroimg} alt="beautiful products"  />
       </div>
+      <FrequentProduct />
       <CollectionSlider />
       <div className='herodiv'>
       <img className='homeimg' src={Homeimg} alt="beautiful products"  />
@@ -45,6 +46,7 @@ function Home() {
       <BlogCard img={img6} />
       <BlogCard img={img6} />
       <Btn text="Explore more ideas    ->" />
+     
       <BottomNavbar />
     </div>
     // 

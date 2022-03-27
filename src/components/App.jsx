@@ -6,11 +6,12 @@ import Product from "./ProductsPage/Product"
 import ProductFlow from './ProductFlowP1Page/ProductFlow';
 import LoginInfo from "./LoginInfoPage/LoginInfo"
 import LoginScreen from "./LoginScreenPage/LoginScreen"
+import Home from "./HomePage/Home.jsx";
 import Error from './Error';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Imagepicker from './Imagepicker/imagepicker';
 
-import Home from "./HomePage/Home.jsx";
 function App() {
   return (
     <div>
@@ -24,6 +25,7 @@ function App() {
         <Route path='/products' element={<Product />} />
         <Route path='/product-name' element={<ProductFlow />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/pick-image' element={<Imagepicker/>} />
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>
