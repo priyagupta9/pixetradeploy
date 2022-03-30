@@ -1,0 +1,17 @@
+.Slider-Product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Prod-container{
+    height: 9rem;
+    width: 16rem;
+    background-color: rgb(197, 182, 182);
+    margin: 1.5rem;
+    border-radius: 30px;
+    box-shadow: 7px 3px 20px 0px rgba( 0, 0, 0, 0.16);
+}
+.Slider-Product-container p{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}

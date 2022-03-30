@@ -12,7 +12,6 @@ function Number() {
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [OtpError,setOtpError] = useState("");
 
-
   function handleChange(element, index){
     let value=element.value;
     if(isNaN(value)) return false;
@@ -31,7 +30,7 @@ function Number() {
   const navigate = useNavigate();
   function handleSubmit(e){
     e.preventDefault();
-      navigate("/products", { state: { name: state.name} });
+      navigate("/productsState", { state: { name: state.name} });
   }
   return (
     <div>
@@ -62,4 +61,4 @@ function Number() {
   );
 }
 
-export default Number;
+export default Number;  
