@@ -6,7 +6,7 @@ const FeaturedProducts = () => {
     <div className='oneaboveall'>
         <div className="grid">
     <div className="grid__item">
-        <div className="card"><img className='card_img' src={FP1} alt="product image" />
+        <div className="card"><img className='card_img' src={FP1} alt="product-img" />
             <div className="card__content">
                 <h1 className="card__header">Product Name</h1>
             </div>

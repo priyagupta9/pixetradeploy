@@ -3,16 +3,10 @@ import "./styles/home.css";
 
 import React from 'react';
 import Header from "../ProductsPage/Header"
-import Photobook from "../ProductsPage/Photobook"
-import  photobookbg from "../ProductsPage/img/photobookbg.png"
 import BottomNavbar from "../ProductsPage/BottomNavbar"
 import Heroimg from "./img/heroimg.png";
 import Homeimg from "./img/homeing2.jpg";
-import { Link } from 'react-router-dom';
 import FrequentProduct from '../Sliders/FrequentProducts'
-import Collection from "./CollectionComp"
-import FeaturedProducts from './FeaturedProducts';
-import SwipeToSlide from '../SwipeToSlide';
 import ProductSlider from '../Sliders/FeaturedProductSlider';
 import CollectionSlider from '../Sliders/CollectionSlider';
 import BlogCard from './BlogCard';
@@ -22,7 +16,7 @@ import Btn from '../ProductFlowP1Page/Btn';
 function Home() {
   return (
     <div className='product-page'>
-      <Header name="Joe" />
+      <Header name="" />
       <div className='herodiv'>
       <img className='heroimg' src={Heroimg} alt="beautiful products"  />
       </div>

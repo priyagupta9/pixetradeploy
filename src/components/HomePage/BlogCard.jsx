@@ -7,7 +7,7 @@ const BlogCard = ({img}) => {
          <div class="pen-wrapper">
 
 <article  className="chip">
-  <a className="chip-link" href="#"> 
+  <a className="chip-link" href="/"> 
     <img className='chip-hero wp-post-image' src={img} alt="BlogHeader" />                                  
     <div className="chip-text">
       <h3 className="chip-title">Create a memory wall with polaroids and lights in just an hour!</h3>
