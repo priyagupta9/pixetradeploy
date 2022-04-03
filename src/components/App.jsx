@@ -11,6 +11,7 @@ import Error from './Error';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Imagepicker from './Imagepicker/imagepicker';
+import ProductState from './ProductsPageState/ProductState';
 
 function App() {
   return (
@@ -18,24 +19,18 @@ function App() {
       
     <Router>
       <Routes>
-        <Route path='/' element={<LoginScreen />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/loginScreen' element={<LoginScreen />} />
         <Route path='/login' element={<LoginInfo />} />
         <Route path='/otplogin' element={<Otp />} />
         <Route path='/pixetra' />
+        <Route path='/productsState' element={<ProductState />} />
         <Route path='/products' element={<Product />} />
         <Route path='/product-name' element={<ProductFlow />} />
-        <Route path='/home' element={<Home />} />
         <Route path='/pick-image' element={<Imagepicker/>} />
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>
-    {/* <LoginScreen />
-    <LoginInfo />
-    <Otp />
-    <Product />
-    <ProductFlow /> */}
- 
-   
     </div>
   );
 }

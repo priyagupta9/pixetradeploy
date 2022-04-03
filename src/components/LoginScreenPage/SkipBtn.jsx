@@ -4,7 +4,7 @@ import skip from './img/skip.png';
 function Skipbtn() {
     return (
       <div className='btn-box'>
-        <a href="#" className='btnskip' >
+        <a href="/loginScreen" className='btnskip' >
           <img src={skip} alt="skip" />
         </a>
       </div>

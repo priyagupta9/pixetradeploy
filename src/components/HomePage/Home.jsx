@@ -16,7 +16,7 @@ import Btn from '../ProductFlowP1Page/Btn';
 function Home() {
   return (
     <div className='product-page'>
-      <Header name="Joe" />
+      <Header name="" />
       <div className='herodiv'>
       <img className='heroimg' src={Heroimg} alt="beautiful products"  />
       </div>

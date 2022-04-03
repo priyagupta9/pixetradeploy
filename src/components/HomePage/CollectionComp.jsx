@@ -7,7 +7,7 @@ const Collection = () => {
     <div className="img-container">
       <div className="img-inner">
         <div className="inner-skew">
-            <img src={colimg} alt="image of collection"/>
+            <img src={colimg} alt="img-of-collection"/>
         </div>
       </div>
     </div>
