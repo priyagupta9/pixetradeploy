@@ -1,0 +1,58 @@
+.credit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30rem;
+}
+.creds .cash{
+    font-size: 12rem;
+}
+.creds .cash-pts{
+    color: #fff;
+    font-size: 4rem;
+}
+.passbook-desc{
+    padding: 3rem;
+    background-color: #fff;
+}
+.passbook-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.passbook-heading h1{
+    color:#222455;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.passbook-heading p{
+    color: #6e7faa;
+    font-size: 3rem;
+}
+.passbook-orders{
+    margin-top: 3rem;
+}
+.order{
+    display: grid;
+    grid-template-columns: 13rem 30rem 12rem;
+    grid-gap: 10px;
+    align-items: center;
+    width: 550px;
+    height: 40px;
+    margin: 0 0 110px;
+    font-size: 2.5rem;
+}
+.order span{
+    background-color: #18bdf7;
+    height: 100px;
+    width: 100px;
+    border-radius: 40px;
+}
+.love-btn{
+    position:fixed;
+    width: 100%;
+    bottom: 4rem;
+    left: 3rem;
+}

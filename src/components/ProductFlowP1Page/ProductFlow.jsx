@@ -10,11 +10,15 @@ import IdealSlider from "../Sliders/IdealSlider"
 import ReviewSlider from "../Sliders/ReviewSlider"
 import Btn from "./Btn";
 import close from "./img/X.png"
+import { useNavigate } from 'react-router-dom';
+
 
 function ProductFlow() {
+    const navigate = useNavigate();
+
     return (
     <div className='product-flow'>
-        <img src={close} alt="close-nav" className='cross' />
+        <img src={close} alt="close-nav" className='cross' onClick={() => navigate(-1)} />
             <div className='slider-box'>
                 <FrequentProduct />
             </div>

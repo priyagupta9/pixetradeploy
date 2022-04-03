@@ -5,8 +5,12 @@
     font-size: 1.8rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 3rem;
 }
 .header span{
     margin-right: 2rem;
+}
+.search{
+    width: 80px;
 }
