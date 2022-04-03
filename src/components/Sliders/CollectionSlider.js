@@ -11,9 +11,9 @@ export default class CollectionSlider extends Component {
   render() {
     const settings = {
       className: "center",
-      infinite: true,
-      centerPadding: "5000px",
-      slidesToShow: 2,
+      infinite: false,
+      centerPadding: "0px",
+      slidesToShow: 2.17,
       swipeToSlide: true,
       arrows: false,
       afterChange: function(index) {

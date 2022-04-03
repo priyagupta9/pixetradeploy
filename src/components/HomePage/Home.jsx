@@ -3,16 +3,10 @@ import "./styles/home.css";
 
 import React from 'react';
 import Header from "../ProductsPage/Header"
-import Photobook from "../ProductsPage/Photobook"
-import  photobookbg from "../ProductsPage/img/photobookbg.png"
 import BottomNavbar from "../ProductsPage/BottomNavbar"
 import Heroimg from "./img/heroimg.png";
 import Homeimg from "./img/homeing2.jpg";
-import { Link } from 'react-router-dom';
 import FrequentProduct from '../Sliders/FrequentProducts'
-import Collection from "./CollectionComp"
-import FeaturedProducts from './FeaturedProducts';
-import SwipeToSlide from '../SwipeToSlide';
 import ProductSlider from '../Sliders/FeaturedProductSlider';
 import CollectionSlider from '../Sliders/CollectionSlider';
 import BlogCard from './BlogCard';
@@ -31,11 +25,7 @@ function Home() {
       <div className='herodiv'>
       <img className='homeimg' src={Homeimg} alt="beautiful products"  />
       </div>
-      {/* {
-        data.map(x=>(
-          <Link to="/product-name" ><Photobook img={photobookbg} /></Link>
-        ))
-      } */}
+  
      
       <ProductSlider />
       <div className='herodiv'>

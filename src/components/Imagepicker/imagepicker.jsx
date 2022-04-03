@@ -1,15 +1,20 @@
 import React from 'react';
 import './styles/imagepicker.css';
-import Btn from '../ProductFlowP1Page/Btn';
-
+import framedpicture from "./img/framedpicture.jpg";
+import Btn from './Btn';
+import Navbar from './Navbar.jsx';
 const Imagepicker = () => {
-  return (
+  return (<>
+    <Navbar />
     <div className='picker'>
-     <h1 className='picker-image'>🖼️</h1>
+      <div className='picker-image-div' >
+      
+   <img className='picker-image' src={framedpicture}  /></div>
      <h3 className='picker-header'>LAST BUT NOT THE LEAST</h3>
     <h4 className='picker-description'> Your memories are always safe with us </h4>    
-    <Btn text="ALLOW ACCESS TO THE GALLERY" />
+    <Btn className="pickerBtn" text="ALLOW ACCESS TO THE GALLERY" />
     </div>
+    </>
   )
 }
 

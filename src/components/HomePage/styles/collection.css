@@ -1,12 +1,12 @@
 .a-box {
     display: inline-block;
-    width: 480px;
+    width: 432px;
     text-align: center;
   }
 
   .img-container {
-      height: 460px;
-      width: 400px;
+      height: 414px;
+      width: 360px;
       overflow: hidden;
       border-radius: 0px 0px 20px 20px;
       display: inline-block;
@@ -14,7 +14,7 @@
   
   .img-container img {
       /* transform: skew(0deg, -13deg); */
-      height: 400px;
+      height: 360px;
      
   }
   
@@ -27,8 +27,8 @@
       font-size: 0px;
       margin: 30px 0px 0px 0px;
       background: #c8c2c2;
-      height: 365px;
-      width: 400px;
+      height: 328.5px;
+      width: 360px;
   }
   
   .collection-text-container {

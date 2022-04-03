@@ -1,3 +1,66 @@
-:host {
-    background-color: black;
+.header{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  height: 10rem;
+  color: rgb(255,255,255);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  font-weight: 100;
+}
+.header span{
+  margin-right: 2rem;
+}
+
+.picker{
+  text-align: center;
+  background-color: white;
+  padding-top: 28rem;
+  padding-bottom: 54rem;
+  
+}
+.picker-image-div{
+  display: flex;
+  justify-content: center;
+}
+.picker-image-div2{
+ 
+  border-radius: 2rem;
+}
+.picker-image{
+ 
+  border-radius: 2rem;
+  border: 2.3rem solid #edf4fb ;
+}
+.picker-header{
+ font-size:  2.5rem;
+  margin: 25px 96px 12px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  color: #393939;
+
+}
+  .picker-description{
+    padding-top: 10px;
+    font-size: 2.3rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 100;
+    color: #757575;
   }
+  .want-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 4.5rem;
+}
+.want-btn button{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: 100;
+    background-color: rgb(30, 122, 242);
+    padding: 2rem 3rem;
+    font-size: 2.6rem;
+    color: rgb(255,255,255);
+    border-radius: 10rem;
+}

@@ -10,9 +10,13 @@ import {useLocation } from 'react-router-dom';
 const data=[1,2,3,4]
 function Product() {
   const {state} = useLocation();
+  const name = state.name;
+  if(name=== null){
+    name = "User";
+  }
   return (
     <div className='product-page'>
-      <Header name={state.name} />
+      <Header name={name} />
       {
         data.map(x=>(
           <Link to="/product-name" ><Photobook img={photobookbg} /></Link>
