@@ -7,8 +7,9 @@ function Phone({phonenumber}){
     return(
       <div className='white-box'>
       <img src={mobile} alt="phone" className='circle' />
-        <div className='nr-input'>
-                <span>+91</span>
+      <div className='nr-input'>
+            <span>+91</span>
+            <p className='--'>----------</p>
                 <input
                     type="tel"
                     pattern='[0-9]*'

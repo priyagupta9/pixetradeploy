@@ -1,18 +1,22 @@
 .circle-btns-wrapper{
-    margin-top: 3rem;
+    margin-top: 34px;
     display: flex;
+    gap: 20px;
 }
 .circlebtn{
-    width: 150px;
-    height: 150px;
+    width: 64px;
+    height: 65px;
     border-radius: 50%;
-    padding-top: 35px;
-    padding-right: 25px;
-    padding-left: 25px;
+    align-items: center;
+    border: solid 1px var(--powder-blue);
+    background-color: var(--white);
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .circlebtn img{
-    width: 150px;
-    height: 150px;
+    width: 60px;
+    height: 60px;
 }
 .btnskip{
     width: 100%;
@@ -22,9 +26,4 @@
 }
 .btnskip img{
     width: 100%;
-}
-a{
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }

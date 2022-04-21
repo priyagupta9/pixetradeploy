@@ -5,6 +5,7 @@ import email from "./img/email.png";
 import person from "./img/person.png"
 import "../OtpPage/styles/WhiteBtn.css"
 import "../OtpPage/styles/BlueBtn.css"
+import "../OtpPage/styles/Phone.css"
 import  mobile from "../images/mobile.png"
 import "./styles/Login.css";
 import { useNavigate } from 'react-router-dom';
@@ -16,6 +17,7 @@ function LoginInfo() {
   const [usernameerror,setusernameError] = useState("");
   const [emailerror,setEmailError] = useState("");
   const [phoneerror,setphoneError] = useState("");
+
   const [inputValues,setInputValues] = useState({
   username:"",
   email:"",
@@ -107,7 +109,7 @@ function LoginInfo() {
     <div className='otp-page'>
       <img src={logo} alt="logo" className='logo'/>
 
-      <form className='loginInfo-form'>
+      <form className='loginInfo-form' method='POST'>
 
         <div className='input_box'>
           <div className='white-box'>
@@ -132,6 +134,7 @@ function LoginInfo() {
             <img src={mobile} alt="phone" className='circle' />
             <div className='nr-input'>
             <span>+91</span>
+            <p className='--'>----------</p>
                 <input
                     type="tel"
                     pattern='[0-9]*'

@@ -37,7 +37,8 @@ function Number() {
       <form action="/" method="post" name="validtelephone">
         <div className="phone">
         <Phone phonenumber={state.phoneNumber} />
-          <div className="otp-box"> 
+          <div className="otp-box">
+          <div>
             {
               otp.map((data,index) => {
                 return <input 
@@ -50,6 +51,7 @@ function Number() {
                 />
               })
             }
+            </div>
             <small>{OtpError}</small>
           </div>
         </div>

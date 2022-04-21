@@ -1,46 +1,47 @@
 .white-box{
     display: flex;
-    background-color: rgb(255 ,255 ,255);
-    border: 2px solid rgb(38, 153, 251);
-    height: 5rem;
-    width: 85%;
-    padding: 1rem 1.3rem;
-    border-radius: 4rem;
+    background-color: var(--white);
+    border: 2px solid var(--light-blue);
+    height: 55px;
+    width: 90%;
+    object-fit: contain;
+    border-radius:27.5px;
     position: relative;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 .white-box img{
     position: absolute;
-    left: 2.7rem;
-    padding: 4px;
-    height: 50px;
-    width: 50px;
-    fill: rgb(255 ,255 ,255);
+    left: 27px;
+    /* padding: 4px; */
+    height: 20.7px;
+    width: 20.7px;
+    fill: var(--white);
+    border-radius: 0;
 }
 .inp-img{
-    fill: rgb(38, 153, 251);
+    fill: var(--light-blue);
 }
 .circle{
-    background-color: rgb(38, 153, 251);
-    border-radius: 50%;
+    padding: 1px;
+    background-color: var(--light-blue);
+    border-radius: 50% !important;
 }
 .white-text{
-    color: rgb(38, 153, 251);
+    color: var(--light-blue);
     text-transform: uppercase;
-    font-size: 2.3rem;
+    font-size: 15px;
     font-weight: bold;
 }
 .white-box input{
     text-align: center;
     outline: none;
     border: none;
-    font-size: 2.7rem;
-    color: rgb(38, 153, 251);
-    width: 75%;
+    font-size: 15px;
+    color: var(--light-blue);
+    width: 60%;
 }
 ::placeholder{
-    color: rgb(38, 153, 251);
+    color: var(--light-blue);
 }
