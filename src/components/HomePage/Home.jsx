@@ -1,37 +1,29 @@
-import '../ProductsPage/styles/product.css';
+import React from 'react';
 import "./styles/home.css";
 
-import React from 'react';
-import Header from "../ProductsPage/Header"
-import BottomNavbar from "../ProductsPage/BottomNavbar"
+import Header from './Header';
 import Heroimg from "./img/heroimg.png";
 import Homeimg from "./img/homeing2.jpg";
-import FrequentProduct from '../Sliders/FrequentProducts'
-import ProductSlider from '../Sliders/FeaturedProductSlider';
-import CollectionSlider from '../Sliders/CollectionSlider';
-import BlogCard from './BlogCard';
 import img6 from "./img/image6.jpg";
-import Btn from '../ProductFlowP1Page/Btn';
 
-function Home() {
+import FrequentProduct from '../Sliders/FrequentProducts';
+import CollectionSlider from '../Sliders/CollectionSlider';
+// import ProductSlider from '../Sliders/FeaturedProductSlider';
+import BlogCard from './BlogCard';
+
+const Home = () => {
   return (
     <div className='product-page'>
-      <Header name="" />
-      <div className='herodiv'>
-      <img className='heroimg' src={Heroimg} alt="beautiful products"  />
-      </div>
-      <FrequentProduct />
-      <CollectionSlider />
-      <div className='herodiv'>
+    <Header name="Harsh" />
+    <div className='herodiv'>
+    <img className='heroimg' src={Heroimg} alt="beautiful products"  />
+    </div>
+    <FrequentProduct />
+    <CollectionSlider />
+    <div className='herodiv'>
       <img className='homeimg' src={Homeimg} alt="beautiful products"  />
       </div>
-      {/* {
-        data.map(x=>(
-          <Link to="/product-name" ><Photobook img={photobookbg} /></Link>
-        ))
-      } */}
-     
-      <ProductSlider />
+      {/* <ProductSlider /> */}
       <div className='herodiv'>
       <img className='homeimg' src={img6} alt="beautiful products"  />
       </div>
@@ -39,13 +31,9 @@ function Home() {
       <BlogCard img={img6} />
       <BlogCard img={img6} />
       <BlogCard img={img6} />
-      <Btn text="Explore more ideas    ->" />
-     
-      <BottomNavbar />
+      {/* <Btn text="Explore more ideas    ->" /> */}
     </div>
-    // 
-    // <FeaturedProducts />
-  );
+  )
 }
 
-export default Home;
+export default Home

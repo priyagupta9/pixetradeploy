@@ -1,12 +1,12 @@
 .a-box {
     display: inline-block;
-    width: 480px;
+    width: 175px;
     text-align: center;
   }
 
   .img-container {
-      height: 460px;
-      width: 400px;
+      height: 200px;
+      width: 150px;
       overflow: hidden;
       border-radius: 0px 0px 20px 20px;
       display: inline-block;
@@ -14,39 +14,40 @@
   
   .img-container img {
       /* transform: skew(0deg, -13deg); */
-      height: 400px;
+      height: 139px;
      
   }
   
   .inner-skew {
       display: inline-block;
-      border-radius: 2rem;
+      border-radius: 0.5rem;
       overflow: hidden;
       padding: 0px;
       transform: skew(0deg, 0deg);
       font-size: 0px;
-      margin: 30px 0px 0px 0px;
+      margin: 20px 0px 0px 0px;
       background: #c8c2c2;
-      height: 365px;
-      width: 400px;
+      height: 139px;
+      width: 150px;
   }
   
   .collection-text-container {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    padding: 280px 20px 20px 20px;
-    border-radius: 20px;
+    padding: 130px 20px 0px 20px;
+    border-radius: 0.5rem;
     background: rgb(167 232 255);
-    margin: -340px 0px 80px 0px;
+    margin: -160px 0px 31px 0px;
     line-height: 19px;
    
   }
   
-  .collection-text-container h3 {
-    margin: 40px 0px 0px 0px;
+  .collection-text-container p {
+    margin: 0;
+    padding: 0;
     color: rgb(57 57 57);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
-    font-weight: 800;
+    font-size: 16px;
+    font-weight: 600;
     padding-bottom: 40px;
   }
   

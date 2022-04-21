@@ -4,14 +4,14 @@
     align-items: center;
 }
 .Prod-container{
-    height: 9rem;
-    width: 16rem;
+    height: 46px;
+    width: 80px;
     background-color: rgb(197, 182, 182);
-    margin: 1.5rem;
-    border-radius: 30px;
+    margin: 12px 12px 10px 12px;
+    border-radius: 0.6rem;
     box-shadow: 7px 3px 20px 0px rgba( 0, 0, 0, 0.16);
 }
 .Slider-Product-container p{
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 14px;
+    margin: -2px 0 0 0;
 }

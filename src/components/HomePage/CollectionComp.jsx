@@ -12,7 +12,7 @@ const Collection = () => {
       </div>
     </div>
     <div className="collection-text-container">
-      <h3>Collection Name</h3>
+      <p>Collection Name</p>
       <div>
        
     </div>

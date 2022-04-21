@@ -2,16 +2,15 @@
     background-color: white;
 } */
 .herodiv{
-    background-color: white;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
 }
 .heroimg{
-    width: 97%;
-    border-radius: 2.5rem;
-   margin-top: 25px;
+   width: 96%;
+    border-radius: 0.5rem;
+   margin-top: 6px;
    
 }
 .homeimg{
