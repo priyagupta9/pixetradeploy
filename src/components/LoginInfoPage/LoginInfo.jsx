@@ -103,6 +103,7 @@ function LoginInfo() {
       else{
         Navigate("/otplogin", { state: { phoneNumber: inputValues.phone , name: inputValues.username} });
       }
+
   }
 
   return (
@@ -114,8 +115,9 @@ function LoginInfo() {
         <div className='input_box'>
           <div className='white-box'>
           <img src={person} alt="phone" />
-            <input type="text" id="userName" placeholder='Enter Your Name' name='username' value={inputValues.username}
+            <input type="text" id="userName" placeholder='Create a Username' name='username' value={inputValues.username}
               onChange={(e) => inputEvent(e)}></input>
+           
           </div>
           <small>{usernameerror}</small>
         </div>
@@ -150,6 +152,7 @@ function LoginInfo() {
           </div>
             <small>{phoneerror}</small>
           </div>
+
           <button className='blue-box sub' type='submit' onClick={handleSubmit}>
           <p className='blue-text'>CONTINUE</p></button>
            </form>
