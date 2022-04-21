@@ -1,5 +1,5 @@
 import React from "react";
-import "./allLogin.css"
+import "./allLogin.css";
 
 function Error(){
     return (

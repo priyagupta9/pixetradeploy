@@ -10,12 +10,17 @@ const data=[1,2,3,4]
 function Product() {
   return (
     <div className='product-page'>
-      <Header name= "" />
+      <Header name= "Priya" />
       {
         data.map(x=>(
           <Link to="/product-name" ><Photobook img={photobookbg} /></Link>
         ))
       }
+       {/* {
+        data.map(x=>(
+          <Photobook img={photobookbg} />
+        ))
+      } */}
       <BottomNavbar />
     </div>
   );

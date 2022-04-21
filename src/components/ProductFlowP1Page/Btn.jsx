@@ -2,7 +2,7 @@ import React from "react";
 
 function Btn(props){
     return(
-        <div className="want-btn">
+        <div className="wantBtn">
             <button>{props.text} {props.emoji}</button>
         </div>
     )

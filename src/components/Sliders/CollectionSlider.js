@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-// import lala from "./images/512.png"
+
 // css 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -11,9 +11,9 @@ export default class CollectionSlider extends Component {
   render() {
     const settings = {
       className: "center",
-      infinite: true,
-      centerPadding: "5000px",
-      slidesToShow: 2,
+      infinite: false,
+      centerPadding: "0px",
+      slidesToShow: 2.17,
       swipeToSlide: true,
       arrows: false,
       afterChange: function(index) {

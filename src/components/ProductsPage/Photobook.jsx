@@ -3,11 +3,9 @@ import React from 'react';
 
 function Photobook({img}) {
   return (
-    <div className='product-photo'>
-      <div>
+    <div className='product-card'>
         <img src={img} alt="Photobook" />
         <h1>PhotoBooks</h1>
-        </div>
     </div>
   );
 }

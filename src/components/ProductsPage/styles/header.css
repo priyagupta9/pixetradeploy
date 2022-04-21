@@ -1,16 +1,16 @@
 .header{
     background-image: url(../img/rectangle-headerBg.png);
-    height: 10rem;
-    color: rgb(255,255,255);
-    font-size: 1.8rem;
+    height: 50px;
+    color: var(--white);
     display: flex;
     align-items: center;
+    padding: 0 8px;
     justify-content: space-between;
-    padding: 0 3rem;
 }
-.header span{
-    margin-right: 2rem;
+.header span, h1{
+    font-size: 16px;
+    margin-right: 6px;
 }
 .search{
-    width: 80px;
+    width: 23.2px;
 }
