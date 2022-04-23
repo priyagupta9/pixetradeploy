@@ -9,7 +9,6 @@ function Phone({phonenumber}){
       <img src={mobile} alt="phone" className='circle' />
       <div className='nr-input'>
             <span>+91</span>
-            <p className='--'>----------</p>
                 <input
                     type="tel"
                     pattern='[0-9]*'
