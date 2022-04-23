@@ -34,17 +34,18 @@ function ProductFlow() {
             prodName="Product Name" 
             price="149" 
             desc="Lorem ur dl labore et dolor aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris" />
+        </div>
             <div className='ideal-slider-box'>
-                <p className='ideal-text'>Ideal for</p>
+                <p className='ideal-text padding'>Ideal for</p>
                 <IdealSlider />
             </div>
-            <div className='delivery-box'>
+            <div className='delivery-box padding'>
                 <Delivery deliveryName="Standard" deliveryPrice="49" emoji="🚲" />
                 <Delivery deliveryName="Express" deliveryPrice="89" emoji="🚀" />
             </div>
-            <p className='review'>Reviews</p>
+            <p className='review padding'>Reviews</p>
             <ReviewSlider />
-        </div>
+        
                 <div className='scroll'>
                 <span>^^</span>
                 <p>Scroll down for more info</p>
